@@ -17,21 +17,27 @@
     margin: auto;
     text-align: left;
 }
-#img-holder {
+.img-holder {
     width: fit-content;
     margin: 1rem auto;
 
 }
-#img-holder>img {
+.img-holder>img {
     width: 300px;
     border-radius: 10px;
 }
 
-.description-container > p{
+.data-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.data-info > p{
     margin: 1rem 0;
 }
 
-.description-container > p > a {
+.data-info > p > a {
     text-decoration: none;
 }
 
@@ -52,11 +58,7 @@
         font-size: 14px;
     }
     
-    /* .page-creation-container {
+    .img-holder>img {
         width: 100%;
-    } */
-
-    #img-holder>img {
-        width: 60%;
     }
 }

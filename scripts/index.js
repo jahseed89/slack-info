@@ -1,9 +1,9 @@
-let slackDisplayImage = document.getElementById('img-holder')
-let slackUserName = document.getElementById('name')
-let currentDayOfTheWeek = document.getElementById('current-day')
-let currentUTCTime = document.getElementById('current-time')
-let myTrack = document.getElementById('track')
-let githubURL = document.getElementById('repo-link')
+let slackDisplayImage = document.querySelector('[data-testid="slackDisplayImage"]')
+let slackUserName = document.querySelector('[data-testid="slackUserName"]')
+let currentDayOfTheWeek = document.querySelector('[data-testid="currentDayOfTheWeek"]')
+let currentUTCTime = document.querySelector('[data-testid="currentUTCTime"]')
+let myTrack = document.querySelector('[data-testid="myTrack"]')
+let githubURL = document.querySelector('[data-testid="githubURL"]')
 
 const slackDataInfo = () => {
 
@@ -25,15 +25,13 @@ const slackDataInfo = () => {
         
         return `${hours}:${minutes}:${seconds}`;
       }
-      // 
-    const user = slackInfo[0]
 
-    slackDisplayImage.innerHTML = `<img src= '${user.picture}'/>`
-    slackUserName.innerText = user.name
+    slackDisplayImage.innerHTML = `<img src= 'https://ca.slack-edge.com/T05FFAA91JP-U05RQQ9MU3B-6693fe70f338-512'/>`
+    slackUserName.innerText = "Samson Ocran"
     currentDayOfTheWeek.innerText = currentDayName()
     currentUTCTime.innerText = currentTime()
-    myTrack.innerText = user.track
-    githubURL.innerHTML = `<a href="${user.github}" target="_blank">Link to Repository</a>`
+    myTrack.innerText = "Frontend"
+    githubURL.innerHTML = `<a href="https://github.com/jahseed89/slack-info" target="_blank">Link to Repository</a>`
 
 }
 
